@@ -1,0 +1,48 @@
+# Created objects of page classes in Test cases
+#  pytest -s -v --html=Report\report_ddt.html testCases/test_login_ddt.py --browser chrome
+# pytest -s -v -n=4 testCases/test_login.py --browser chrome
+Step 11
+# 11. Grouping Tests
+1.1 Grouping markers add markers to every  test method :
+@pytets.mark.sanity
+@pytest.mark.regression
+1.2 Add marker entries in pytest.ini file under test cases folder
+pytest.ini
+[pytest]
+markers=
+sanity
+regression
+
+Run:pytest -s -v -m "sanity and regression "
+pytest -s -v -m "sanity or regression "
+pytest -s -v -m "sanity" pytest -s -v -m --html=Report\report_group.html testCases/ --browser chrome
+
+Step 12 : Run tests in cmd prompt  and run.bat file
+12.1 : Create run.bat file
+pytest -s -v -m "sanity" --html=Report/report_group.html testCases/ --browser chrome
+in bat file rem before command
+
+
+# Remote reop url : https://github.com/omsfuke/PythonHybridFramework.git
+1.Create local git
+git init
+2.Connect your local git  with GitHUb(Global repo)
+git remote add origin https://github.com/your-username/your-repo.git
+git config --global user.name "omsfuke"
+git config --global.email "abc@gmail.com"
+3.Git status
+4.git add -A (Add all files to staging area)
+5.Commit code in to git repo
+git commit -m "First comment"
+6.push the code from git -->Github Repo
+git push -u origin master
+
+git pull --> pull all code from github to local
+
+
+#14 Run tests on Jenkins
+
+
+
+
+
